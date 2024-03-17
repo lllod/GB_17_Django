@@ -34,4 +34,13 @@ class Order(models.Model):
     order_date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.customer.name, self.product.name
+        return f'{self.customer.name} | {self.product.name}'
+
+
+class OrderProduct(models.Model):
+    order = models.ForeignKey(Order, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    # order_amount = models.IntegerField(default=1)
+
+    def __str__(self):
+        return f'{self.order.product.name} | {self.product.product_name} | {self.order.customer.id}'

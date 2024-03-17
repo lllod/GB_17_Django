@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'phonenumber_field',
     "seminar1app",
-    "seminar2app",
+    "seminarsapp",
 ]
 
 MIDDLEWARE = [

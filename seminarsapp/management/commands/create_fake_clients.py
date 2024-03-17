@@ -1,5 +1,5 @@
 from django.core.management.base import BaseCommand
-from seminar2app.models import Client
+from seminarsapp.models import Client
 from faker import Faker
 from datetime import datetime
 

@@ -41,8 +41,8 @@ class Migration(migrations.Migration):
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('order_price', models.DecimalField(decimal_places=2, max_digits=8)),
                 ('order_date', models.DateTimeField(auto_now_add=True)),
-                ('customer', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='seminar2app.client')),
-                ('product', models.ManyToManyField(to='seminar2app.product')),
+                ('customer', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='seminarsapp.client')),
+                ('product', models.ManyToManyField(to='seminarsapp.product')),
             ],
         ),
     ]
