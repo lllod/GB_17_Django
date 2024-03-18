@@ -14,8 +14,8 @@ class Command(BaseCommand):
         fake = Faker('ru_RU')
         count = kwargs['count']
         for i in range(count):
-            product_name = fake.text(max_nb_chars=100)
-            product_description = fake.text(max_nb_chars=512)
+            product_name = fake.text(max_nb_chars=10)
+            product_description = fake.text(max_nb_chars=100)
             product_price = fake.pydecimal(min_value=0.1, max_value=100.0)
             product_count = fake.random_int(0, 100)
             product_date_added = datetime.strptime(fake.date(), '%Y-%m-%d')
