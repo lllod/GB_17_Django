@@ -22,3 +22,5 @@ urlpatterns = [
     path('', include('seminar1app.urls')),
     path('seminarsapp/', include('seminarsapp.urls')),
 ]
+
+# urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_URL)

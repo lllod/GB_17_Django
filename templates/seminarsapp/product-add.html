@@ -5,9 +5,36 @@
 {% endblock %}
 
 {% block content %}
-    <form action="" method="post">
+    <form action="" method="post" enctype="multipart/form-data" class="row g-2 mx-3 my-2">
         {% csrf_token %}
-        {{ form.as_div }}
-        <input type="submit" value="Добавить">
+        <div class="col-12">
+            <label for="id_product_name" class="form-label">{{ form.product_name.template_name }}</label>
+            {{ form.product_name }}
+        </div>
+        <div class="col-12">
+            <label for="id_product_description"
+                   class="form-label">{{ form.product_description.template_name }}</label>
+            {{ form.product_description }}
+        </div>
+        <div class="col-md-4">
+            <label for="id_product_price" class="form-label">{{ form.product_price.template_name }}</label>
+            {{ form.product_price }}
+        </div>
+        <div class="col-md-4">
+            <label for="id_product_count" class="form-label">{{ form.product_count.template_name }}</label>
+            {{ form.product_count }}
+        </div>
+        <div class="col-md-4">
+            <label for="id_product_date_added"
+                   class="form-label">{{ form.product_date_added.template_name }}</label>
+            {{ form.product_date_added }}
+        </div>
+        <div class="col-12">
+            <label for="id_product_image" class="form-label">{{ form.product_image.template_name }}</label>
+            {{ form.product_image }}
+        </div>
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <input type="submit" value="Добавить" class="btn btn-outline-secondary">
+        </div>
     </form>
 {% endblock %}
